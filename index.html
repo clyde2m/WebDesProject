@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Click Cafe</title>
+
+
+<link rel="stylesheet" href="css/bootstrap.css">
+<style>
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid green;
+  border-left: 16px solid red;
+  border-right: 16px solid pink;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+ <div id="loader"></div>
+ <div style="display:none;" id="myDiv" class="animate-bottom">
+<nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid"> 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html">Click Cafe</a> </div>
+    
+   
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    	<ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a> </li>
+        <li><a href="Services.html">Services</a> </li>
+        <li><a href="Menu.html">Menu</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div>
+       <img src="img/Click_cafe.jpg" alt="" class="img-responsive"> </div>
+        <h1 class="text-center">Click Cafe</h1>
+<p class="text-center">Print while you wait. Many printers offer the same other services other printers have. At Click Cafe, we offer all that, plus a cozy nook where you can sit, relax, and wait for your printing job to be finished.</p>
+       
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="thumbnail"> <img src="../Services.jpg" alt="Thumbnail Image 1" class="img-responsive">
+        <div class="caption">
+          <h3>Services</h3>
+          <p>Our services include digital printing, binding, laminating, and cutting. All the regular services you can find in a serious printing shop. At Click Cafe, we do it well, and we do it while you relax.  
+          <br>
+          <br>
+          </p>
+          <hr>
+          <p><a href="Services.html" class="btn btn-success" role="button">Check it Out</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="thumbnail"> <img src="../Menu.jpg" alt="Thumbnail Image 1" class="img-responsive">
+        <div class="caption">
+          <h3>Menu</h3>
+          <p>We offer a plethora of drinks and food for your leisure as you wait for your documents to be printed. Our kitchen is open 24 hours, so you may print any time of day. Or if you just want to lounge around or cozy cafe, without printing anything; that is alright too.</p>
+          <hr>
+          <p><a href="Menu.html" class="btn btn-success" role="button">Check it Out</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="row">
+<div class="col-lg-4 col-sm-6 col-md-12">
+      <h2>Contact Us</h2>
+      <address>
+      <strong>FEU Institute of Technology 	</strong><br>
+      P. Paredes St. Sampaloc, Manila, Metro Manila<br>
+      <abbr title="Phone"></abbr>Trunkline: (02) 281-8888<br>
+      Telefax: (02) 835-3312<br>
+      Email: info@fit.edu.ph
+      </address>
+    </div>
+<div class="col-sm-12 col-lg-8">
+      <h2>About Us</h2>
+      <p>Giuseppe took over his father Earvyn printing business when the latter retired. He is an expert printer and binder and has delivered several outstanding award-winning print documents that rival the beauty and quality of French expert Mark John.
+Justine, his brother, is the world-renown restaurateur educated in the The Brasaille Foundation of Switzerland. </p>
+</div>
+  </div>
+</div>
+  <hr>
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Copyright © ClickCafe. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>	
+</body>
+</html>
